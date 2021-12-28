@@ -1,0 +1,33 @@
+version: 0.2
+
+#phases
+phases:
+  install:
+    #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
+    #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
+    runtime-versions:
+       nodejs: 12
+      # name: version
+    commands:
+       - echo initializing runtime environment on $(date)
+      # - command
+  pre_build:
+    commands:
+       - echo ready to start building artifacts
+      # - command
+  build:
+    commands:
+       - echo build started successfully on $(date)
+       - npm install
+  post_build:
+    commands:
+       - npm run build
+       - echo packaging production ready artifacts
+
+artifacts:
+  files:
+     - scripts/*
+     - dist/**/*
+     - appspec.yml
+  name: devops-master-$(date +%Y-%m-%d)
+
