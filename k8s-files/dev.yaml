@@ -19,7 +19,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - image: 023144112974.dkr.ecr.us-east-1.amazonaws.com/my-app:prod
+      - image: mkowe/vue-weather-app:prod 
         name: my-app
         ports:
         - containerPort: 80
