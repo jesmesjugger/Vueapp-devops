@@ -8,8 +8,13 @@ metadata:
   namespace: devops-poc
 spec:
   ports:
-  - port: 80
+  - name: http
+    port: 443
     protocol: TCP
+    targetPort: 80
+  - name: https
+    port: 443
+    protocol: HTTPS
     targetPort: 80
   selector:
     app: my-app
