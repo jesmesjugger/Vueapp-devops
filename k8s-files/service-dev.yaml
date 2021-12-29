@@ -5,6 +5,7 @@ metadata:
   labels:
     app: my-app
   name: my-app
+  namespace: devops-poc
 spec:
   ports:
   - port: 80
