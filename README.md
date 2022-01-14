@@ -21,7 +21,7 @@ chmod +x ./install
 service codedeploy-agent start
 service codedeploy-agent enable
 systemctl start nginx
-systemctk enable nginx
+systemctl enable nginx
 cd /usr/share/nginx/html
 yum update -y
 curl --silent --location https://rpm.nodesource.com/setup_12.x |  bash -
