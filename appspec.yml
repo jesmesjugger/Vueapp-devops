@@ -12,6 +12,7 @@ hooks:
 # For each deployment lifecycle event, specify multiple "location" entries
 
   ApplicationStop:
+    - location: scripts/deregister_from_elb.sh
     - location: scripts/app_stop.sh
       timeout: 300
       runas: root
@@ -34,6 +35,7 @@ hooks:
 #   in the script specified in "location".
   ApplicationStart:
     - location: scripts/application_start.sh
+    - location: scripts/register_with_elb.sh
       timeout: 300
       runas: root
 
