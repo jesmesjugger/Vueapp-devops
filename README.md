@@ -4,7 +4,7 @@
 [![Deploy to ECR](https://github.com/jesmesjugger/Vueapp-devops/actions/workflows/deployment.yml/badge.svg)](https://github.com/jesmesjugger/Vueapp-devops/actions/workflows/deployment.yml)
 ## uses OpenWeather API to search and display weather from accross the globe
 ## This is a sample project for CICD pipeline for Vuejs app leveraging on AWS Cloud native tools
-
+## Demistify workflows 
 #### by Martin Mkolwe
 
 ## Project setup servers to use this userdata for installing necessary packages needed
